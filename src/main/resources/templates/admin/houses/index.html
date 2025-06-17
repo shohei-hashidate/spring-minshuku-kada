@@ -108,8 +108,9 @@
 						               <li th:each="i : ${#numbers.sequence(0, housePage.getTotalPages() - 1)}" class="page-item">
 						                   <span th:if="${i == housePage.getNumber()}" class="page-link active samuraitravel-active" th:text="${i + 1}"></span>
 						                   <a th:unless="${i == housePage.getNumber()}" th:href="@{/admin/houses(page = ${i}, keyword = ${keyword})}" class="page-link samuraitravel-page-link" th:text="${i + 1}"></a>
-						               </li>
-								   </th:block>
+						               </li> 
+								   <!-- liがあるが検知されていない？ -->
+				
 								   
 						               <li class="page-item">                        
 						                   <span th:if="${housePage.isLast()}" class="page-link disabled">次</span>
